@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
-
+import defaultMarkDown  from "./mark";
 
 function App() {
-  const [markdown, setMarkdown] = useState("This would be *italicized* text and this would be **bold** text, This would be *italicized* text and this would be **bold** text, This would be *italicized* text and this would be **bold** text");
-  const onChangeHandler=(e)=>{
-  setMarkdown(e.target.value)
-  console.log(typeof(e.target.value))
-  }
+  const [markdown, setMarkdown] = useState(defaultMarkDown);
+  const onChangeHandler = (e) => {
+    setMarkdown(e.target.value);
+    console.log(typeof e.target.value);
+  };
   return (
     <main>
+      <h1 className="app-heading"> MarkDown Preview</h1>
       <section className="markdown">
         <textarea
           className="input"
