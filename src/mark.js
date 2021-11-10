@@ -1,0 +1,3 @@
+const defaultMarkDown =
+  '# Depth first search \n ###  Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking. \n![alt text for screen readers](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Depth-first-tree.svg/250px-Depth-first-tree.svg.png "Text to show on mouseover") \n```vector<vector<int>> adj; // graph represented as an adjacency list\nint n;\n vector<bool> visited;\n void dfs(int v) {\n visited[v] = true;\n for (int u : adj[v]) {\n if (!visited[u])\n dfs(u); \n }\n } ``` ';
+export default defaultMarkDown;
